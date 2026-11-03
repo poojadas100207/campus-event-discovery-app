@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "serve": "node server.js",
+    "start": "node scripts/local-server.js",
+    "serve": "node scripts/local-server.js",
     "test": "node --test"
   },
   "keywords": [
