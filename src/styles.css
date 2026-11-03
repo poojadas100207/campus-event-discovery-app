@@ -1,0 +1,220 @@
+/* Modern Campus Theme - Professional Mobile App Styles */
+
+:root {
+  --color-navy: #263D52;
+  --color-charcoal: #202B36;
+  --color-offwhite: #F8F7F4;
+  --color-white: #FFFFFF;
+  --color-coral: #D9825B;
+  --color-dustyblue: #A9BEC4;
+  --color-warmbeige: #E8D8C5;
+  --color-slategrey: #777D80;
+  --shadow-card: 0 4px 12px rgba(38, 61, 82, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-offwhite);
+  color: var(--color-charcoal);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.01em;
+  margin: 0;
+  min-width: 320px;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Plus Jakarta Sans', 'Manrope', 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Crisp Modern Cards */
+.campus-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E8D8C5;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(38, 61, 82, 0.05);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.campus-card:hover {
+  border-color: #A9BEC4;
+  box-shadow: 0 8px 18px rgba(38, 61, 82, 0.08);
+  transform: translateY(-2px);
+}
+
+.campus-panel {
+  background-color: #FFFFFF;
+  border: 1px solid #E8D8C5;
+  border-radius: 16px;
+}
+
+/* Event Ticket Pass Styling */
+.ticket-pass {
+  position: relative;
+  background-color: #FFFFFF;
+  border: 1px solid #E8D8C5;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(38, 61, 82, 0.07);
+  overflow: hidden;
+}
+
+.ticket-notch-left,
+.ticket-notch-right {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #F8F7F4;
+  border-radius: 50%;
+  top: 66%;
+  z-index: 10;
+}
+
+.ticket-notch-left {
+  left: -10px;
+  border-right: 1px solid #E8D8C5;
+}
+
+.ticket-notch-right {
+  right: -10px;
+  border-left: 1px solid #E8D8C5;
+}
+
+/* Phone Mockup Shell */
+.phone-mockup-frame {
+  width: 100%;
+  max-width: 410px;
+  height: 840px;
+  max-height: calc(100vh - 100px);
+  margin: 0 auto;
+  background-color: #F8F7F4;
+  border: 10px solid #202B36;
+  border-radius: 44px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -10px rgba(32, 43, 54, 0.2), 0 0 0 1px rgba(232, 216, 197, 0.6);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-speaker-cutout {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 18px;
+  background-color: #202B36;
+  border-radius: 12px;
+  z-index: 40;
+}
+
+/* Custom Scrollbar in Theme Colors */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F7F4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E8D8C5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A9BEC4;
+}
+
+/* Image zoom transition */
+.event-img-zoom {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.campus-card:hover .event-img-zoom {
+  transform: scale(1.03);
+}
+
+/* Keep legacy utility classes used by modal markup inside the Modern Campus palette. */
+.bg-slate-950,
+.bg-slate-900,
+.bg-slate-800,
+.bg-slate-700 {
+  background-color: var(--color-navy) !important;
+}
+
+.bg-slate-950\/80 {
+  background-color: rgb(32 43 54 / 0.8) !important;
+}
+
+.bg-slate-900\/80 {
+  background-color: rgb(38 61 82 / 0.8) !important;
+}
+
+.text-slate-200,
+.text-slate-300,
+.text-slate-400 {
+  color: var(--color-slategrey) !important;
+}
+
+.text-indigo-300,
+.text-indigo-400,
+.text-emerald-300,
+.text-emerald-400 {
+  color: var(--color-coral) !important;
+}
+
+.border-slate-800,
+.border-slate-700,
+.border-indigo-500\/40,
+.border-indigo-500\/50 {
+  border-color: var(--color-warmbeige) !important;
+}
+
+.bg-indigo-500\/20 {
+  background-color: rgb(232 216 197 / 0.6) !important;
+}
+
+.hover\:bg-slate-800:hover,
+.hover\:bg-slate-700:hover {
+  background-color: var(--color-warmbeige) !important;
+}
+
+/* Legacy neutral values are mapped to the approved warm off-white/coral tokens. */
+.bg-\[\#F2EFEB\],
+.bg-\[\#F2EFEB\]\/60 {
+  background-color: var(--color-offwhite) !important;
+}
+
+.hover\:bg-\[\#F2EFEB\]:hover {
+  background-color: var(--color-offwhite) !important;
+}
+
+.hover\:bg-\[\#c8734c\]:hover {
+  background-color: var(--color-coral) !important;
+}
+
+.glass-panel-elevated {
+  background-color: var(--color-white);
+  border-color: var(--color-warmbeige);
+  box-shadow: var(--shadow-card);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgb(217 130 91 / 0.35);
+  outline-offset: 2px;
+}

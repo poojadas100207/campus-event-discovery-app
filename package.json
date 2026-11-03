@@ -1,0 +1,19 @@
+{
+  "name": "campus-event-discovery-app",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "serve": "node server.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "campus-events",
+    "clash-guard",
+    "event-discovery",
+    "user-flow-prototype"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}
